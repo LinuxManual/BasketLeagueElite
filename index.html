@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basket Clash | HotHeroes vs Ιπτάμενοι</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Basket Clash</h1>
+    <nav>
+      <a href="#rankings">Rankings</a>
+      <a href="#admin">Διαχείριση</a>
+      <a href="#matches">Αγώνες</a>
+      <a href="#betting">Betting</a>
+      <a href="#insights">Insights</a>
+      <a href="#chat">Chat</a>
+    </nav>
+  </header>
+  <main>
+    <section id="rankings"><h2>Power Ranking HotHeroes + Ιπτάμενοι</h2><div id="rankingTable"></div></section>
+    <section id="admin">
+      <h2>Πρόσθεσε μέλη & αγώνες</h2>
+      <form id="memberForm"><select id="memberTeam"><option>HotHeroes</option><option>Ιπτάμενοι</option></select><input id="memberName" placeholder="Όνομα μέλους"><button>Προσθήκη</button></form>
+      <form id="statsForm"><input id="statsPass" placeholder="Κωδικός"><select id="statsPlayer"></select><input id="shots" type="number" min="0" placeholder="Shots"><input id="assists" type="number" min="0" placeholder="Assists"><input id="rebounds" type="number" min="0" placeholder="Rebounds"><input id="blocks" type="number" min="0" placeholder="Blocks"><button>Ενημέρωση stats</button></form>
+      <form id="matchForm"><input id="matchDate" type="date"><input id="matchTime" type="time"><input id="matchCourt" placeholder="Γήπεδο"><button>Δημιουργία αγώνα</button></form>
+      <form id="scoreForm"><select id="scoreMatch"></select><input id="scoreHome" type="number" min="0" placeholder="HotHeroes"><input id="scoreAway" type="number" min="0" placeholder="Ιπτάμενοι"><button>Αποθήκευση σκορ</button></form>
+    </section>
+    <section id="matches"><h2>Πρόγραμμα Αγώνων</h2><div id="matchesTable"></div></section>
+    <section id="betting"><h2>Betting Center</h2><form id="betForm"><select id="betMarket"><option value="winner">Νικητής αγώνα</option><option value="mvp">MVP στο τέλος της σεζόν</option></select><select id="betMatch"></select><input id="betPrediction" placeholder="Πρόβλεψη"><input id="betStake" type="number" min="1" max="100" placeholder="Ποντάρισμα (€)"><button>Καταχώρηση</button></form><div id="betsTable"></div></section>
+    <section id="insights"><h2>Game Insights</h2><p>Συνολικοί αγώνες: <b id="insTotal">0</b></p><p>HotHeroes νίκες: <b id="insHome">0</b></p><p>Ιπτάμενοι νίκες: <b id="insAway">0</b></p><p>Μ.Ο. συνολικών πόντων: <b id="insAvg">0</b></p></section>
+    <section id="chat"><h2>Fan Zone Chat</h2><form id="chatForm"><input id="chatUser" placeholder="Όνομα"><input id="chatMsg" placeholder="Μήνυμα"><button>Αποστολή</button></form><div id="chatList"></div></section>
+  </main>
+<script src="app.js"></script>
+</body>
+</html>
